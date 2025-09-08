@@ -1,20 +1,19 @@
-<script>
-document.addEventListener("DOMContentLoaded", function() {
-  // ========== Mobile Menu ==========
-  const menuToggle = document.getElementById('mobile-menu');
-  const navMenu = document.querySelector('.nav-menu');
+// Mobile Menu Toggle
+const menuToggle = document.getElementById('mobile-menu');
+const navMenu = document.querySelector('.nav-menu');
 
-  menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
-    menuToggle.classList.toggle('open');
-  });
+menuToggle.addEventListener('click', () => {
+  navMenu.classList.toggle('active');
+});
 
-  document.querySelectorAll('.nav-link').forEach(link => {
-    link.addEventListener('click', () => {
+// Close mobile menu on link click
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', () => {
+    if (navMenu.classList.contains('active')) {
       navMenu.classList.remove('active');
-      menuToggle.classList.remove('open');
-    });
+    }
   });
+});
 
   // ========== Charts ==========
   const skillLabels = ["Python","SQL","SAS","R","Excel","Tableau","Power BI","Tally","Statistics"];
@@ -64,3 +63,4 @@ document.addEventListener("DOMContentLoaded", function() {
   });
 });
 </script>
+
