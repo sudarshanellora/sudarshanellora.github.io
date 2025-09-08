@@ -225,20 +225,23 @@ html {
 /* ======================= Experience ======================= */
 .exp-item {
   display: flex;
-  align-items: center;
-  margin-bottom: 40px;
-  gap: 20px;
+  align-items: flex-start; /* Aligns top of image and text */
+  margin-bottom: 50px;     /* Extra space between experience items */
+  gap: 30px;               /* More spacing between image and text */
   flex-wrap: wrap;
 }
 
 .exp-item img {
-  width: 220px;
+  width: 180px;             /* Slightly smaller image */
+  height: auto;             /* Maintain aspect ratio */
   border-radius: 15px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
 .exp-info {
   flex: 1;
+  text-align: justify;       /* Justify text */
+  margin-top: 5px;           /* Small spacing from image top if needed */
 }
 
 .exp-item.odd {
@@ -248,50 +251,48 @@ html {
 .exp-item.even {
   flex-direction: row-reverse;
 }
-.exp-info {
-  text-align: justify; /* Justifies all text */
-}
 
 .exp-bullets {
-  padding-left: 20px;
-  margin-top: 10px;
+  padding-left: 25px;        /* Indent bullet points slightly more */
+  margin-top: 15px;          /* Space from preceding content */
 }
 
 .exp-bullets li {
-  margin-bottom: 10px;
-  line-height: 1.6;
+  margin-bottom: 12px;       /* More space between bullet points */
+  line-height: 1.7;          /* Better readability */
 }
+
 
 /* ======================= Projects ======================= */
 .proj-item {
   display: flex;
-  gap: 20px;
-  margin-bottom: 40px;
+  align-items: flex-start; /* Align top of image and text */
+  gap: 30px;               /* More spacing between image and text */
+  margin-bottom: 50px;     /* More space between project items */
   flex-wrap: wrap;
-  align-items: center;
 }
 
 .proj-item img {
-  width: 300px;
+  width: 250px;             /* Slightly smaller image */
+  height: auto;             /* Maintain aspect ratio */
   border-radius: 15px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
 .proj-info {
   flex: 1;
-}
-.proj-info {
-  text-align: justify; /* Justify all project descriptions */
+  text-align: justify;       /* Justify project description */
+  margin-top: 5px;           /* Small spacing from image top if needed */
 }
 
 .proj-bullets {
-  padding-left: 20px;
-  margin-top: 10px;
+  padding-left: 25px;        /* Indent bullet points slightly more */
+  margin-top: 15px;          /* Space from preceding content */
 }
 
 .proj-bullets li {
-  margin-bottom: 10px;
-  line-height: 1.6;
+  margin-bottom: 12px;       /* More space between bullet points */
+  line-height: 1.7;          /* Better readability */
 }
 
 
@@ -383,4 +384,5 @@ footer span a:hover {
     height: 360px !important;
   }
 }
+
 
