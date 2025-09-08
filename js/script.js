@@ -2,21 +2,22 @@
 const menuToggle = document.getElementById('mobile-menu');
 const navMenu = document.querySelector('.nav-menu');
 
-if(menuToggle) {
+if (menuToggle && navMenu) {
   menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');
+    navMenu.classList.toggle('active');       // show/hide menu
+    menuToggle.classList.toggle('open');      // animate hamburger
   });
 }
 
 // Close mobile menu on link click
 document.querySelectorAll('.nav-link').forEach(link => {
   link.addEventListener('click', () => {
-    if(navMenu.classList.contains('active')) {
+    if (navMenu.classList.contains('active')) {
       navMenu.classList.remove('active');
+      menuToggle.classList.remove('open');    // reset hamburger animation
     }
   });
 });
-
 
 // ======= Charts =======
 document.addEventListener("DOMContentLoaded", function () {
@@ -88,4 +89,5 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
 
