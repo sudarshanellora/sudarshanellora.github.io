@@ -248,6 +248,19 @@ html {
 .exp-item.even {
   flex-direction: row-reverse;
 }
+.exp-info {
+  text-align: justify; /* Justifies all text */
+}
+
+.exp-bullets {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.exp-bullets li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
 
 /* ======================= Projects ======================= */
 .proj-item {
@@ -267,6 +280,20 @@ html {
 .proj-info {
   flex: 1;
 }
+.proj-info {
+  text-align: justify; /* Justify all project descriptions */
+}
+
+.proj-bullets {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.proj-bullets li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
 
 /* ======================= Skills & Charts ======================= */
 .chart-div {
@@ -356,3 +383,4 @@ footer span a:hover {
     height: 360px !important;
   }
 }
+
