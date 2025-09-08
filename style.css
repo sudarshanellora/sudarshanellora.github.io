@@ -61,7 +61,7 @@ h1, h2, h3 {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  gap: 4px;
+  gap: 5px;
 }
 
 .menu-toggle .bar {
@@ -69,7 +69,18 @@ h1, h2, h3 {
   width: 25px;
   background-color: #fff;
   border-radius: 2px;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+}
+
+/* Hamburger animation when open */
+.menu-toggle.open .bar:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+.menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle.open .bar:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* Show menu toggle on mobile */
@@ -88,6 +99,7 @@ h1, h2, h3 {
     display: none;
     border-radius: 0 0 8px 8px;
     padding: 10px 0;
+    transition: all 0.3s ease;
   }
 
   .nav-menu.active {
@@ -107,7 +119,7 @@ html {
 
 /* ======================= Sections ======================= */
 .section {
-  padding: 100px 10%; /* more padding to avoid overlap with navbar */
+  padding: 100px 10%;
 }
 
 .section h2 {
@@ -308,25 +320,6 @@ html {
   color: #fb8500;
 }
 
-/* ======================= Responsive Adjustments ======================= */
-@media (max-width: 768px) {
-  .about-container,
-  .exp-item,
-  .proj-item {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .exp-item img,
-  .proj-item img {
-    width: 100%;
-  }
-
-  .plotly-3d, .plotly-2d {
-    height: 360px !important;
-  }
-}
-
 /* ======================= Footer ======================= */
 footer {
   background: #0d1b2a;
@@ -344,5 +337,22 @@ footer span a:hover {
   text-decoration: underline;
 }
 
+/* ======================= Responsive Adjustments ======================= */
+@media (max-width: 768px) {
+  .about-container,
+  .exp-item,
+  .proj-item {
+    flex-direction: column;
+    text-align: center;
+  }
 
+  .exp-item img,
+  .proj-item img,
+  .about-img {
+    width: 100%;
+  }
 
+  .plotly-3d, .plotly-2d {
+    height: 360px !important;
+  }
+}
