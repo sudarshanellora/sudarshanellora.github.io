@@ -1,23 +1,21 @@
-// Mobile Menu Toggle
-const menuToggle = document.getElementById('mobile-menu');
-const navMenu = document.querySelector('.nav-menu');
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const menuToggle = document.getElementById('mobile-menu');
+  const navMenu = document.querySelector('.nav-menu');
 
-if (menuToggle && navMenu) {
   menuToggle.addEventListener('click', () => {
-    navMenu.classList.toggle('active');       // show/hide menu
-    menuToggle.classList.toggle('open');      // animate hamburger
+    navMenu.classList.toggle('active');
+    menuToggle.classList.toggle('open'); // optional for hamburger animation
   });
-}
 
-// Close mobile menu on link click
-document.querySelectorAll('.nav-link').forEach(link => {
-  link.addEventListener('click', () => {
-    if (navMenu.classList.contains('active')) {
+  document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
       navMenu.classList.remove('active');
-      menuToggle.classList.remove('open');    // reset hamburger animation
-    }
+      menuToggle.classList.remove('open');
+    });
   });
 });
+</script>
 
 // ======= Charts =======
 document.addEventListener("DOMContentLoaded", function () {
@@ -89,5 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
 
 
