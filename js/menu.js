@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const menuToggle = document.querySelector(".menu-toggle");
+  const menuToggle = document.getElementById("mobile-menu"); // matches your HTML
   const navMenu = document.querySelector(".nav-menu");
 
   if (menuToggle && navMenu) {
@@ -9,8 +9,8 @@ document.addEventListener("DOMContentLoaded", () => {
       menuToggle.classList.toggle("open"); // animate hamburger
     });
 
-    // Close menu when a link is clicked
-    document.querySelectorAll(".nav-menu li a").forEach(link => {
+    // Close menu when any link is clicked
+    document.querySelectorAll(".nav-link").forEach(link => {
       link.addEventListener("click", () => {
         navMenu.classList.remove("active");
         menuToggle.classList.remove("open");
