@@ -1,5 +1,4 @@
-/* ----------------- (your original CSS) ----------------- */
-/* General Reset */
+/* ======================= General Reset ======================= */
 * {
   margin: 0;
   padding: 0;
@@ -18,7 +17,7 @@ h1, h2, h3 {
   font-weight: 600;
 }
 
-/* Navbar */
+/* ======================= Navbar ======================= */
 .navbar {
   position: fixed;
   width: 100%;
@@ -57,7 +56,7 @@ h1, h2, h3 {
   color: #ffb703;
 }
 
-/* Mobile Menu */
+/* ======================= Mobile Menu ======================= */
 .menu-toggle {
   display: none;
   flex-direction: column;
@@ -70,48 +69,10 @@ h1, h2, h3 {
   width: 25px;
   background-color: #fff;
   border-radius: 2px;
-}
-/* Default: hide menu on mobile */
-.nav-menu {
-  display: none;
-  flex-direction: column;
-  list-style: none;
-  padding-left: 0;
-}
-
-/* Show menu when active */
-.nav-menu.active {
-  display: flex;
-}
-
-/* Toggle button style */
-.menu-toggle {
-  display: block;
-  cursor: pointer;
-}
-
-.menu-toggle .bar {
-  display: block;
-  width: 25px;
-  height: 3px;
-  margin: 5px auto;
-  background-color: #333;
   transition: 0.3s;
 }
 
-/* Desktop: always show menu and hide toggle */
-@media (min-width: 768px) {
-  .nav-menu {
-    display: flex !important;
-    flex-direction: row;
-  }
-  .menu-toggle {
-    display: none;
-  }
-}
-
-
-/* Responsive */
+/* Show menu toggle on mobile */
 @media (max-width: 768px) {
   .menu-toggle {
     display: flex;
@@ -139,14 +100,14 @@ h1, h2, h3 {
   }
 }
 
-/* Smooth Scroll */
+/* ======================= Smooth Scroll ======================= */
 html {
   scroll-behavior: smooth;
 }
 
-/* Sections */
+/* ======================= Sections ======================= */
 .section {
-  padding: 80px 10%;
+  padding: 100px 10%; /* more padding to avoid overlap with navbar */
 }
 
 .section h2 {
@@ -167,7 +128,7 @@ html {
   border-radius: 2px;
 }
 
-/* Home Section */
+/* ======================= Home ======================= */
 .home {
   height: 100vh;
   background-size: cover;
@@ -195,7 +156,7 @@ html {
   font-size: 1.2rem;
 }
 
-/* About */
+/* ======================= About ======================= */
 .about-container {
   display: flex;
   gap: 40px;
@@ -228,7 +189,7 @@ html {
   background: #fb8500;
 }
 
-/* Education */
+/* ======================= Education ======================= */
 .edu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -242,13 +203,14 @@ html {
   box-shadow: 0 6px 15px rgba(0,0,0,0.1);
   text-align: center;
 }
+
 .edu-card img {
   width: 50px;
   border-radius: 15px;
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
-/* Experience */
+/* ======================= Experience ======================= */
 .exp-item {
   display: flex;
   align-items: center;
@@ -275,7 +237,7 @@ html {
   flex-direction: row-reverse;
 }
 
-/* Projects */
+/* ======================= Projects ======================= */
 .proj-item {
   display: flex;
   gap: 20px;
@@ -294,18 +256,18 @@ html {
   flex: 1;
 }
 
-/* Skills & Certifications */
+/* ======================= Skills & Charts ======================= */
 .chart-div {
   width: 100%;
   height: 400px;
   min-height: 320px;
 }
+
 .skills-container {
   margin-top: 24px;
 }
 
-
-/* Testimonials */
+/* ======================= Testimonials ======================= */
 .testimonial-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -328,7 +290,7 @@ html {
   text-align: right;
 }
 
-/* Contact */
+/* ======================= Contact ======================= */
 .contact-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -346,7 +308,7 @@ html {
   color: #fb8500;
 }
 
-/* Responsive */
+/* ======================= Responsive Adjustments ======================= */
 @media (max-width: 768px) {
   .about-container,
   .exp-item,
@@ -360,21 +322,24 @@ html {
     width: 100%;
   }
 
-  .plotly-3d, .plotly-2d { height: 360px; }
-}
-/* footer section styling */
-footer{
-    background: #0d1b2a;
-    padding: 15px 23px;
-    color: #fff;
-    text-align: center;
-}
-footer span a{
-    color: lightblue;
-    text-decoration: none;
-}
-footer span a:hover{
-    text-decoration: underline;
+  .plotly-3d, .plotly-2d {
+    height: 360px !important;
+  }
 }
 
+/* ======================= Footer ======================= */
+footer {
+  background: #0d1b2a;
+  padding: 15px 23px;
+  color: #fff;
+  text-align: center;
+}
 
+footer span a {
+  color: lightblue;
+  text-decoration: none;
+}
+
+footer span a:hover {
+  text-decoration: underline;
+}
