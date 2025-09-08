@@ -71,6 +71,45 @@ h1, h2, h3 {
   background-color: #fff;
   border-radius: 2px;
 }
+/* Default: hide menu on mobile */
+.nav-menu {
+  display: none;
+  flex-direction: column;
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Show menu when active */
+.nav-menu.active {
+  display: flex;
+}
+
+/* Toggle button style */
+.menu-toggle {
+  display: block;
+  cursor: pointer;
+}
+
+.menu-toggle .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #333;
+  transition: 0.3s;
+}
+
+/* Desktop: always show menu and hide toggle */
+@media (min-width: 768px) {
+  .nav-menu {
+    display: flex !important;
+    flex-direction: row;
+  }
+  .menu-toggle {
+    display: none;
+  }
+}
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -337,4 +376,5 @@ footer span a{
 footer span a:hover{
     text-decoration: underline;
 }
+
 
